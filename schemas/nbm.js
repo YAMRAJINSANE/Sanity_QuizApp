@@ -14,13 +14,15 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'correctMarks',
-      type: 'number',
+      name: 'categoriesHead',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'CategoryHead'}}],
       validation: Rule => Rule.required()
     },
     {
-      name: 'incorrectMarks',
-      type: 'number',
+      name: 'categoriesSubHead',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'CategorySubHead'}}],
       validation: Rule => Rule.required()
     },
     {
@@ -50,9 +52,13 @@ export default {
             },
             {
               name: 'correct',
-              type: 'number',
-              title: 'Correct Option',
-              validation: Rule => Rule.required()
+              type: 'string',
+            
+                of: [{type: 'reference', to: {type: 'options'}}],
+                validation: Rule => Rule.required()
+              
+             
+              
             }
           ]
         }

@@ -1,3 +1,7 @@
 import category from './category'
 import exam from "./nbm"
-export const schemaTypes = [ category,exam]
+import CategoryHead from './CategoryHead'
+import CategorySubHead from './CategorySubHead'
+import weeklyCurrentAffair from './Current'
+
+export const schemaTypes = [exam,category,CategoryHead,CategorySubHead,weeklyCurrentAffair ]
