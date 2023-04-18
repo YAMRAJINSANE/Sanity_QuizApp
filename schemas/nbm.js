@@ -20,12 +20,6 @@ export default {
       validation: Rule => Rule.required()
     },
     {
-      name: 'categoriesSubHead',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'CategorySubHead'}}],
-      validation: Rule => Rule.required()
-    },
-    {
       name: 'questions',
       type: 'array',
       of: [
