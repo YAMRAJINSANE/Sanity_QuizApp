@@ -10,6 +10,12 @@ export default defineType({
       title: 'Title',
       type: 'string',
     }),
+    defineField(  {
+      name: 'categories',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'category'}}],
+      validation: Rule => Rule.required()
+    }),
     defineField({
       name: 'image',
       title: 'Image',
